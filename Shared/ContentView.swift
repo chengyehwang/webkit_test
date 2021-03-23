@@ -14,20 +14,22 @@ import UIKit
 import WebKit
 class ViewController: UIViewController, WKUIDelegate {
     @IBOutlet weak var webInputText: UITextField!
-    @IBOutlet weak var webview: WKWebView!
+    @IBOutlet weak var webView: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.webview.uiDelegate = self
+        self.webView.uiDelegate = self
         
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     @IBAction func goBackBtnAction(_ sender: Any) {
-        
+        self.webView.goBack()
     }
     @IBAction func loadBtnAction(_ sender: Any) {
-        
+        let inputStr = webInputText.text!
+        let request = URLRequest.init(url: URL.init(string: inputStr)!)
+        self.webView.load(request)
     }
 }
 
