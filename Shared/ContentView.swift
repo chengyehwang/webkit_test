@@ -7,18 +7,30 @@
 
 import SwiftUI
 
-#if os(OSX)
-   
-#elseif os(iOS)
 // https://ithelp.ithome.com.tw/articles/10196218
 import WebKit
 
 struct ContentView: View {
     var body: some View {
-        Webview(url: URL(string: "https://google.com")!)
+        Webview {
+            let myURL = URL(string: "https://google.com")
+            let myRequest = URLRequest(url: myURL!)
+            $0.load(myRequest)
+        }
     }
 }
 
+
+struct Webview: ViewRepresentableHelper {
+    var configuration = { (view: WKWebView) in }
+}
+/*
+struct ContentView: View {
+    var body: some View {
+        Webview(url: URL(string: "https://google.com")!)
+    }
+}
+ 
 struct Webview: UIViewRepresentable {
     let url: URL
 
@@ -36,8 +48,8 @@ struct Webview: UIViewRepresentable {
         webview.load(request)
     }
 }
+*/
 
-#endif
 /*struct ContentView: View {
     var body: some View {
         Text("Hello, world!")
