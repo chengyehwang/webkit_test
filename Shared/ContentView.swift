@@ -10,36 +10,40 @@ import SwiftUI
 #if os(OSX)
    
 #elseif os(iOS)
-import UIKit
+// https://ithelp.ithome.com.tw/articles/10196218
 import WebKit
-class ViewController: UIViewController, WKUIDelegate {
-    @IBOutlet weak var webInputText: UITextField!
-    @IBOutlet weak var webView: WKWebView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.webView.uiDelegate = self
-        
+
+struct ContentView: View {
+    var body: some View {
+        Webview(url: URL(string: "https://google.com")!)
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+}
+
+struct Webview: UIViewRepresentable {
+    let url: URL
+
+    func makeUIView(context: UIViewRepresentableContext<Webview>) -> WKWebView {
+        let webview = WKWebView()
+
+        let request = URLRequest(url: self.url, cachePolicy: .returnCacheDataElseLoad)
+        webview.load(request)
+
+        return webview
     }
-    @IBAction func goBackBtnAction(_ sender: Any) {
-        self.webView.goBack()
-    }
-    @IBAction func loadBtnAction(_ sender: Any) {
-        let inputStr = webInputText.text!
-        let request = URLRequest.init(url: URL.init(string: inputStr)!)
-        self.webView.load(request)
+
+    func updateUIView(_ webview: WKWebView, context: UIViewRepresentableContext<Webview>) {
+        let request = URLRequest(url: self.url, cachePolicy: .returnCacheDataElseLoad)
+        webview.load(request)
     }
 }
 
 #endif
-struct ContentView: View {
+/*struct ContentView: View {
     var body: some View {
         Text("Hello, world!")
             .padding()
     }
-}
+}*/
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

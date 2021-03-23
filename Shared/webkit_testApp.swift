@@ -15,3 +15,4 @@ struct webkit_testApp: App {
         }
     }
 }
+
