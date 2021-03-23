@@ -15,7 +15,22 @@ import WebKit
 class ViewController: UIViewController, WKUIDelegate {
     @IBOutlet weak var webInputText: UITextField!
     @IBOutlet weak var webview: WKWebView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.webview.uiDelegate = self
+        
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    @IBAction func goBackBtnAction(_ sender: Any) {
+        
+    }
+    @IBAction func loadBtnAction(_ sender: Any) {
+        
+    }
 }
+
 #endif
 struct ContentView: View {
     var body: some View {
