@@ -15,6 +15,8 @@
 		8504B1EA260985B30077735D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8504B1BF260985B30077735D /* ContentView.swift */; };
 		8504B1EB260985B30077735D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8504B1C0260985B30077735D /* Assets.xcassets */; };
 		8504B1EC260985B30077735D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8504B1C0260985B30077735D /* Assets.xcassets */; };
+		85E0A4F02609A419005D9E98 /* ViewRepresentableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E0A4EF2609A419005D9E98 /* ViewRepresentableHelper.swift */; };
+		85E0A4F12609A419005D9E98 /* ViewRepresentableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E0A4EF2609A419005D9E98 /* ViewRepresentableHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		8504B1E0260985B30077735D /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8504B1E4260985B30077735D /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		8504B1E6260985B30077735D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85E0A4EF2609A419005D9E98 /* ViewRepresentableHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRepresentableHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,7 @@
 		8504B1BD260985B30077735D /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				85E0A4EF2609A419005D9E98 /* ViewRepresentableHelper.swift */,
 				8504B1BE260985B30077735D /* webkit_testApp.swift */,
 				8504B1BF260985B30077735D /* ContentView.swift */,
 				8504B1C0260985B30077735D /* Assets.xcassets */,
@@ -308,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85E0A4F02609A419005D9E98 /* ViewRepresentableHelper.swift in Sources */,
 				8504B1E9260985B30077735D /* ContentView.swift in Sources */,
 				8504B1E7260985B30077735D /* webkit_testApp.swift in Sources */,
 			);
@@ -317,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85E0A4F12609A419005D9E98 /* ViewRepresentableHelper.swift in Sources */,
 				8504B1EA260985B30077735D /* ContentView.swift in Sources */,
 				8504B1E8260985B30077735D /* webkit_testApp.swift in Sources */,
 			);
