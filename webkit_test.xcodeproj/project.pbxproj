@@ -17,6 +17,8 @@
 		8504B1EC260985B30077735D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8504B1C0260985B30077735D /* Assets.xcassets */; };
 		85E0A4F02609A419005D9E98 /* ViewRepresentableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E0A4EF2609A419005D9E98 /* ViewRepresentableHelper.swift */; };
 		85E0A4F12609A419005D9E98 /* ViewRepresentableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E0A4EF2609A419005D9E98 /* ViewRepresentableHelper.swift */; };
+		85E0A549260B6F43005D9E98 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 85E0A548260B6F43005D9E98 /* index.html */; };
+		85E0A54A260B6F43005D9E98 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 85E0A548260B6F43005D9E98 /* index.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,7 @@
 		8504B1E4260985B30077735D /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		8504B1E6260985B30077735D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85E0A4EF2609A419005D9E98 /* ViewRepresentableHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRepresentableHelper.swift; sourceTree = "<group>"; };
+		85E0A548260B6F43005D9E98 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,7 @@
 		8504B1B8260985B30077735D = {
 			isa = PBXGroup;
 			children = (
+				85E0A511260B6725005D9E98 /* Contents */,
 				8504B1BD260985B30077735D /* Shared */,
 				8504B1C7260985B30077735D /* iOS */,
 				8504B1CE260985B30077735D /* macOS */,
@@ -153,6 +157,22 @@
 				8504B1E6260985B30077735D /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		85E0A511260B6725005D9E98 /* Contents */ = {
+			isa = PBXGroup;
+			children = (
+				85E0A512260B6732005D9E98 /* Resources */,
+			);
+			path = Contents;
+			sourceTree = "<group>";
+		};
+		85E0A512260B6732005D9E98 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				85E0A548260B6F43005D9E98 /* index.html */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8504B1EB260985B30077735D /* Assets.xcassets in Resources */,
+				85E0A549260B6F43005D9E98 /* index.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8504B1EC260985B30077735D /* Assets.xcassets in Resources */,
+				85E0A54A260B6F43005D9E98 /* index.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,7 +588,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9TB3JTL899;
 				INFOPLIST_FILE = "Tests iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -587,7 +611,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9TB3JTL899;
 				INFOPLIST_FILE = "Tests iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -609,8 +635,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9TB3JTL899;
 				INFOPLIST_FILE = "Tests macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -630,8 +658,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9TB3JTL899;
 				INFOPLIST_FILE = "Tests macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

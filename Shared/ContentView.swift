@@ -13,8 +13,15 @@ import WebKit
 struct ContentView: View {
     var body: some View {
         Webview {
-            let myURL = URL(string: "https://google.com")
-            let myRequest = URLRequest(url: myURL!)
+            let myURL: URL!
+            if (false) {
+                myURL = URL(string: "https://google.com")
+            } else {
+                let urlpath = Bundle.main.path(forResource: "index", ofType: "html")
+                print(urlpath)
+                myURL = URL(fileURLWithPath: urlpath!)
+            }
+            let myRequest = URLRequest(url: myURL)
             $0.load(myRequest)
         }
     }
